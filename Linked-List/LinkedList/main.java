@@ -23,26 +23,33 @@ public class main {
         System.out.println(list.find(100));*/
 
 
-        /*DoublyLinkedList dl =new DoublyLinkedList();
+        DoublyLinkedList dl =new DoublyLinkedList();
         dl.Firstinsert(8);
         dl.Firstinsert(1);
-        dl.Firstinsert(9);
+        /*dl.Firstinsert(9);
         dl.Firstinsert(20);
-        dl.display();
+
         dl.Lastinsert(79);
         dl.Lastinsert(15);
-        dl.display();
-        dl.insertAt(1,69);
-        dl.display();*/
+
+        dl.insertAt(1,69);*/
+
 
         CircularLinkedList cl=new CircularLinkedList();
-        cl.insert(6);
+       /* cl.insert(6);
         cl.insert(9);
         cl.insert(2);
         cl.insert(12);
         cl.display();
         cl.delete(2);
-        cl.display();
+        cl.display();*/
+        /*dl.deletefirst();
+        dl.display();
+        dl.deleteLast();*/
+        dl.display();
+        dl.delete(1,8);
+        dl.display();
+
 
     }
 }

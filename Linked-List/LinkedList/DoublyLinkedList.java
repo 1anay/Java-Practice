@@ -54,6 +54,44 @@ public class DoublyLinkedList {
         node.prev=last;
     }
 
+    public void deletefirst(){
+        if(head==null){
+            return;
+        }
+        if(head.next!=null) {
+            head.next.prev=null;
+            head = head.next;
+        }
+        else
+            head = null;
+    }
+
+    public void delete(int after , int val){
+        Node At =head;
+        if(At ==null||At.next== null)
+            deletefirst();
+
+        while(At!=null){
+            if(At.value==after){
+                At.next=At.next.next;
+                if(At.next!=null)
+                    At.next.prev=At;
+                break;
+            }
+            At=At.next;
+        }
+    }
+    public void deleteLast() {
+        Node last=head;
+        if(last==null|| last.next== null)
+            deletefirst();
+
+        while(last.next.next!=null){
+            last=last.next;
+        }
+        last.next=null;
+
+    }
     public void display(){
         Node temp=head;
         Node last=null;
@@ -64,12 +102,12 @@ public class DoublyLinkedList {
         }
         System.out.println("end");
 
-        System.out.println("In Reverse");
+        /*System.out.println("In Reverse");
         while(last!=null){
             System.out.print(last.value +" ~> ");
             last=last.prev;
         }
-        System.out.println("End");
+        System.out.println("End");*/
     }
 
 
